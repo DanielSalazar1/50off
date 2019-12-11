@@ -21,6 +21,7 @@ User Cases:
     - FIELDS:
         - name
     - This will be the list of all the categories in our app
+    
     - URL: /api/items
     - METHOD: GET
     - FIELDS:

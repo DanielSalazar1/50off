@@ -21,9 +21,15 @@ class Item(models.Model):
     discounted_price = models.FloatField()
     percent_off = models.FloatField()
     serial = models.UUIDField(default=uuid.uuid4, editable=False)
-    photo = models.ImageField(upload_to='uploads/%Y/%m/%d/', blank=True, null=True,)
+    company_name = models.CharField(max_length=255)
+    address = models.CharField(max_length=255, null=False)
+    country = models.CharField(max_length=255)
+    province = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    # photo = models.ImageField(upload_to='uploads/%Y/%m/%d/', blank=True, null=True,)
 
     is_hidden = models.BooleanField(default=False, blank=True,)
+    is_online = models.BooleanField(default=False, blank=True,)
 
     # TO DO
     # WHERE WOULD I BUY THIS PRODUCT AT. (COUNTRY, PROVINCE, CITY)
