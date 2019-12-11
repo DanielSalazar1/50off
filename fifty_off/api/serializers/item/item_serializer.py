@@ -13,7 +13,7 @@ class ItemSerializer(serializers.Serializer):
 
 
     company_name = serializers.CharField()
-    address = serializers.CharField()
+    adress = serializers.CharField()
     is_online = serializers.BooleanField()
     country = serializers.CharField()
     province = serializers.CharField()

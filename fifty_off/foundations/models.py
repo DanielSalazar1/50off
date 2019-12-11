@@ -22,7 +22,7 @@ class Item(models.Model):
     percent_off = models.FloatField()
     serial = models.UUIDField(default=uuid.uuid4, editable=False)
     company_name = models.CharField(max_length=255)
-    address = models.CharField(max_length=255, null=False)
+    adress = models.CharField(max_length=255)
     country = models.CharField(max_length=255)
     province = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
