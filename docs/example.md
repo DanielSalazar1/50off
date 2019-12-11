@@ -1,14 +1,32 @@
-As a user, I can anonymously browse all the deals on the site which are minimum 50% off.
+# As an Admin, I want to add Items and Categories
 
-```bash
-winpty http http://127.0.0.1:8000/api/categories
+## Step 1:
+    winpty python manage.py createsuperuser
+## Step 2:
+    django-admin
+## Step 3:
+    create categories and items inside django-admin
 
-winpty http http://127.0.0.1:8000/api/items 
+# As a user, I can anonymously browse all the deals on the site which are minimum 50% off.
 
 
-winpty http --form POST http://127.0.0.1:8000/api/register   first_name="Daniel"   last_name="Cardenas"   email=daniel@daniel.com   username="daniel123"   password=daniel123
 
-winpty http --form POST http://127.0.0.1:8000/api/login username=daniel1234   password=daniel1234
+## Step 1:
+    winpty http http://127.0.0.1:8000/api/categories
+## Step 2:
+    winpty http http://127.0.0.1:8000/api/items
+
+
+# Regiter
+## Step 1:
+    winpty http --form POST http://127.0.0.1:8000/api/register   first_name="Daniel"   last_name="Cardenas"   email=daniel@daniel.com   username="daniel123"   password=daniel123
+
+# login
+## Step 1:
+    winpty http --form POST http://127.0.0.1:8000/api/login username=daniel1234   password=daniel1234
+
+
+    s
 
 winpty http http://127.0.0.1:8000/api/favourites 'Authorization: Token 56f90412196ea8e8866779829b2f3af791f94979'
 
