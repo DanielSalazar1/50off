@@ -21,7 +21,7 @@ User Cases:
     - FIELDS:
         - name
     - This will be the list of all the categories in our app
-    
+
     - URL: /api/items
     - METHOD: GET
     - FIELDS:
@@ -32,6 +32,7 @@ User Cases:
          - company name
          - address
          - is_online
+
      - FILTERS:
          - percent off
          - discount price
@@ -41,6 +42,7 @@ User Cases:
          - province
          - city
          - category
+
 (3) Regiter
 - Look into "Token Authentication" code that we've done before
 - Code:
@@ -60,17 +62,21 @@ User Cases:
     FIELDS:
         - username
         - password
+
 (5) When logged in, user has ability to "Add item to favourites list".
 - Code:
     URL: /api/favourites
     METHOD: POST
     Create the item into the authenticated user's favourites list
+
 (6) When logged in, I can see my favourites list
 - Code:
     URL: /api/favourites
     METHOD: GET
     Show the list of favourited items for the authenticated user
+
 (7) (OPTIONAL) If an item is in my favourites list, I will receive emails of new offers if there exist in the future.
+
 (8) (DONE) As an Admin, I want to add Items and Categories
 - Connect these models to the Django Admin
 - Create a super user so as an Admin, I can log into Django Admin and operate the app

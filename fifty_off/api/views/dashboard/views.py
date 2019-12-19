@@ -19,6 +19,14 @@ class DashboardAPI(views.APIView):
             data=serializer.data
         )
 
+    def get(self, request):
+        image = Item.objects.get("image")
+
+        return response.Response(
+            status=status.HTTP_200_OK,
+            data=serializer.image
+        )
+
 ## DO a LIST view
 
 class FavouritesAPI(generics.ListCreateAPIView):

@@ -4,8 +4,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
 from rest_framework import generics
 
-from foundations.models import Category, Item, Favorite
-from api.serializers import CategorySerializer, ItemSerializer
+from foundations.models import UserLocation, Category, Item, Images, Favorite
+from api.serializers import CategorySerializer, ItemSerializer, ImagesSerializer, UserLocationSerializer
 
 class CategoryListAPI(generics.ListAPIView):
     serializer_class = CategorySerializer
@@ -21,5 +21,14 @@ class ItemListAPI(generics.ListAPIView):
 
     def get_queryset(self):
         queryset = Item.objects.filter(is_hidden=False).order_by('name')
+
+        return queryset
+
+class ImagesListAPI(generics.ListAPIView):
+
+    serializer_class = ImagesSerializer
+
+    def get_queryset(self):
+        queryset = Images.objects.get("images")
 
         return queryset

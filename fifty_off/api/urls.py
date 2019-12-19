@@ -10,11 +10,13 @@ urlpatterns = [
     # --------------------------#
 
     # HOMEPAGE
-    path('', views.PageLoad.as_view(), name='GetPageLoad'),
+    path('', views.UserLocationAPI.as_view(), name='UserLocationAPI' ),
+
 
     # Item
     path('api/categories', views.CategoryListAPI.as_view(), name='CategoryListAPI'),
     path('api/items', views.ItemListAPI.as_view(), name='itemListAPI'),
+    path('api/images', views.ImagesListAPI.as_view(), name='ImagesListAPI'),
 
 
     # GATEWAY
