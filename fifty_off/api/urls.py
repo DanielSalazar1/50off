@@ -17,6 +17,7 @@ urlpatterns = [
     path('api/categories', views.CategoryListAPI.as_view(), name='CategoryListAPI'),
     path('api/items', views.ItemListAPI.as_view(), name='itemListAPI'),
     path('api/images', views.ImagesListAPI.as_view(), name='ImagesListAPI'),
+    # path('api/favorites', views.FavoritesListAPI.as_view(), name='FavoritesListAPI'),
 
 
     # GATEWAY

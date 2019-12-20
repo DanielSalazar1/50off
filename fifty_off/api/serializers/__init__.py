@@ -5,3 +5,4 @@ from api.serializers.item.category_serializer import CategorySerializer
 from api.serializers.item.item_serializer import ItemSerializer
 from api.serializers.item.image_serializer import ImagesSerializer
 from api.serializers.homepage.homepage_serializer import UserLocationSerializer
+from api.serializers.item.favorites_serializer import FavoritesSerializer

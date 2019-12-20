@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
 # Third party apps
+    # 'django_filters',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -136,7 +137,7 @@ REST_FRAMEWORK = {
     'foundations.drf.custom_authentication.CsrfExemptSessionAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': (
-        # PLACE FILTERING CLASSES HERE.
+        # 'django_filters.rest_framework.DjangoFilterBackend',
     ),
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
@@ -147,7 +148,7 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.MultiPartParser',
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 50
+    'PAGE_SIZE': 50,
 }
 
 MEDIA_URL = 'foundations/media/'

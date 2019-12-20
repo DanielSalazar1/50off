@@ -45,7 +45,7 @@
 
 ## Step 2:
 
-    winpty http http://127.0.0.1:8000/api/favourites 'Authorization: "token": "07410e0f55f9d45b08c878a9b5d4d339defd8100"
+    winpty http http://127.0.0.1:8000/api/favorites 'Authorization: Token 07410e0f55f9d45b08c878a9b5d4d339defd8100'
 
 
 
